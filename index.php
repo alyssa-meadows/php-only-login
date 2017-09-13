@@ -4,10 +4,10 @@ error_reporting(E_ALL ^ E_NOTICE);
 session_start();
 
     if(isset($_POST['submit'])) {
-        $member_username = "Fred";
+        $member_username = "fred";
         $member_password ="password";
         
-        $username = $_POST['username'];
+        $username = strtolower($_POST['username']);
         $password = $_POST['password'];
         
         
@@ -24,19 +24,23 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
         <title>Alyssa's simple easy login</title>
     </head>
     <body>
-        
-        <h1>Simple PHP Only Login System</h1>
-        
-        <form action="index.php" method="POST">
+        <div class="container">
+               
+            <h1>Simple PHP Only Login System</h1><br />
             
-            <input type="text" name="username" placeholder="username" /><br />
-            <input type="password" name="password" placeholder="Password" /><br />
-            <input type="submit" name="submit" value="Login" />
+            <form action="index.php" method="POST">
+                
+                <input type="text" name="username" placeholder="Username" /><br />
+                <input type="password" name="password" placeholder="Password" /><br /><br />
+                <input type="submit" name="submit" value="Login" />
+                
+            </form>
             
-        </form>
-        
+        </div>
     </body>
 </html>

@@ -17,15 +17,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
         <title>Secret Website...shhh</title>
     </head>
     <body>
-        <h1>Secret User Page</h1>
-        <h3>Welcome, <?php echo $username; ?></h3>
+        <div class="container">
+        <h1>Secret User Page</h1><br />
+        <h3>Welcome, <?php echo $username; ?></h3><br />
         
         <form action="logout.php">
-            <input type="submit" value="Logout, dude."/>
+            <input class="center" type="submit" value="Logout, dude."/>
         </form>
-        
+        </div>
     </body>
 </html>
